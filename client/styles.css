@@ -1,0 +1,453 @@
+#app {
+  background-color: #FAEBD7;
+  margin: 0;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FAEBD7;
+  height: 200px;
+}
+
+#title {
+  width: 300px;  
+height: auto;  
+text-align: center;  
+padding-left: 40%;  
+padding-top: 1%;
+padding-bottom: 1%;
+max-height: 5px;
+  max-width: 5px;
+}
+
+#authentication {
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #FAEBD7;
+  padding-left: 5px;
+}
+
+.authentication-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: auto;
+}
+
+.authentication-label {
+  background-color: aqua;
+  width: 80px;
+}
+
+.authentication-label-text {
+  text-align: center;
+}
+
+#authentication-label-register {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#authentication-label-login {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.authentication-data {
+  padding-left: 10px;
+}
+
+#configurations {
+  margin-left: 8%;
+}
+
+.configurations-box {
+display: flex;
+flex-direction: row;
+}
+
+.configurations-div {
+width: 45%;
+display: flex;
+flex-direction: column;
+}
+
+.configurations-row {
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.configurations-column{
+width: 50%;
+}
+
+.configurations-play{
+display:flex;
+flex-direction: column;
+margin-left: 20px;
+width: 20%;
+}
+
+/* https://stackoverflow.com/a/55705680 */
+input[type="number"] {
+  text-align: center;
+  width: 100%;
+}
+
+.config-radio {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="submit"] {
+  width: 100%;
+}
+
+#main-area {
+  height: 300px;
+  background-color: white;
+}
+
+#game-board-area {
+  display: flex;
+  float: left;
+  background-color: #FAEBD7;
+  height: 100%;
+  width: 80%;
+}
+
+#game-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  background-color: #DEB887;
+  border-radius: 20px;
+}
+
+.game-board-storage-wrapper {
+  margin: auto;
+  height: 80%;
+  width: 10%;
+  background-color: rgb(179, 149, 110);
+  border-radius: 40%;
+}
+.game-board-storage {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  
+  /* https://geometryhelp.net/square-inscribed-in-a-circle/ */
+  margin-left: 15%;
+  margin-top: 15%;
+  width: 70%;
+  height: 70%;
+}
+
+.game-board-pits-area {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+  height: 90%;
+  width: 75%;
+  /* background-color: pink; */
+  /*border-radius: 20%;*/
+}
+
+.game-board-pits-row {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: aqua; */
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+
+#game-board-pits-row-0 {
+}
+
+#game-board-pits-row-1 {
+}
+
+/* https://stackoverflow.com/a/13625843 */
+
+/* https://stackoverflow.com/a/10441480 */
+
+.game-board-pit-wrapper {
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(179, 149, 110);
+  /* padding: 10px;
+  background: white;
+  box-sizing: border-box;
+  resize: horizontal;
+  border: 1px dashed;
+  overflow: auto;
+  max-width: 100%;
+  height: calc(100vh - 16px); */
+}
+
+.game-board-pit {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  /* https://geometryhelp.net/square-inscribed-in-a-circle/ */
+  margin-left: 15%;
+  margin-top: 15%;
+  width: 70%;
+  height: 70%;
+}
+
+.game-board-seed {
+  top: 2px;
+  left: 2px;
+  margin: 1px;
+  max-width: 10px;
+  max-height: 10px;
+  width: 20%;
+  height: 20%;
+  background-color: wheat;
+  border-radius: 10px;
+}
+
+#commands {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAEBD7;
+  justify-content: space-around;
+  height: 100%;
+  width: 20%;
+  align-items: center;
+  /* border-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; */
+}
+
+.game-command {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: wheat;
+  width: 80%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.clickable{
+
+}
+.clickable:hover {
+  color: white;
+}
+
+/*testing if I can make pop up work*/
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+
+.box {
+  width: 100%;
+  margin: 0 auto;
+  
+  padding: 35px;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #333;
+  
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #FAEBD7;
+}
+
+.button-selected {
+  background-color: red;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  color: #333;
+  margin-top: 7%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 30%;
+  
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #FAEBD7;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  text-align: left;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=username] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+background-color: wheat;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+/* Set a style for the submit/register button */
+.loginbtn {
+background-color: wheat;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+.registerbtn:hover {
+opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+background-color: #f1f1f1;
+text-align: center;
+}
+
+.login-error{
+  color:red;
+  display: none;
+}
+
+#game-messages {
+  background-color: wheat;
+  
+  text-align: center;
+  font-size: 25px;
+  margin-left: 8%;
+  margin-right: 28%;
+  vertical-align:middle;
+}
