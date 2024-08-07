@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mancala</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type="module" src="main.js"></script>
+    </head>
+    <body id="app">
+        <div id="nav-bar">
+            <div id="title">
+                Mancala
+            </div>
+            
+        </div>
+        <div id="configurations">
+            <h2>Choose your configurations</h2>
+            <div class="configurations-box">
+                <div class="configurations-div">
+                    <div class="configurations-row">
+                        <div>Number of pits per row:</div>
+                        <div class="configurations-column">
+                            <input
+                                class="config-number"
+                                name="no-pits"
+                                type="number"
+                                value="8"
+                            >
+                        </div>
+                    </div>
+                    <div class="configurations-row">
+                        <div>Initial number of seeds:</div>
+                        <div class="configurations-column">
+                            <input
+                                class="config-number"
+                                name="no-seeds"
+                                type="number"
+                                value="4"
+                            >
+                        </div>
+                    </div>
+                    <div class="configurations-row">
+                        <div>Choose the type of game:</div>
+                        <div class="config-radio configurations-column">
+                            <label>
+                                Single Player
+                                <input
+                                    name="sp-mp"
+                                    type="radio"
+                                    checked
+                                    value="single"
+                                >
+                            </label>
+                            <label>
+                                Multi Player
+                                <input name="sp-mp" type="radio" value="multi">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="configurations-row">
+                        <div>Choose who goes first:</div>
+                        <div class="config-radio configurations-column">
+                            <label>
+                                You
+                                <input
+                                    name="starter"
+                                    type="radio"
+                                    checked
+                                    value="p1"
+                                >
+                            </label>
+                            <label>
+                                Them
+                                <input name="starter" type="radio" value="p2">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="configurations-row ">
+                        <div>Choose the difficulty:</div>
+                        <div class="config-radio configurations-column">
+                            <label>
+                                Easy
+                                <input
+                                    name="diff"
+                                    type="radio"
+                                    checked
+                                    value="1"
+                                >
+                            </label>
+                            <label>
+                                Medium
+                                <input name="diff" type="radio" value="2">
+                            </label>
+                            <label>
+                                Hard
+                                <input name="diff" type="radio" value="3">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="configurations-play">
+                    <div class="game-command clickable" id="play-button">PLAY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main-area">
+        <div id="game-board-area">
+            <div id="game-board">
+                <div class="game-board-storage-wrapper">
+                    <div class="game-board-storage"></div>
+                </div>
+                <div class="game-board-pits-area">
+                    <div class="game-board-pits-row" id="game-board-pits-row-0"></div>
+                    <div class="game-board-pits-row" id="game-board-pits-row-1"></div>
+                </div>
+                <div class="game-board-storage-wrapper">
+                    <div class="game-board-storage"></div>
+                </div>
+            </div>
+        </div>
+        <div id="commands">
+            <div class="game-command clickable">
+                <div id="Register">
+                    <div class="box">
+                        <a class="button" href="#popup4">Register</a>
+                    </div>
+                    <div id="popup4" class="overlay">
+                        <div class="popup">
+                            <form action="action_page.php">
+                                <div class="container">
+                                  <p>Please fill in this form to create an account.</p>
+                                  <hr>
+                              
+                                  <label for="email"><b>Email</b></label>
+                                  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                                  <label for="username"><b>Username</b></label>
+                                  <input type="username" placeholder="Username" name="usn" id="usn" required>
+                              
+                                  <label for="psw"><b>Password</b></label>
+                                  <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                                  
+                              
+                                  
+                                  <button type="submit" class="registerbtn">Register</button>
+                                </div>
+                            
+                              </form>
+                            <a class="close" href="#">&times;</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="Login">
+                    <div class="box">
+                        <a class="button" href="#popup5">Login</a>
+                    </div>
+                    <div id="popup5" class="overlay">
+                        <div class="popup">
+                            <form action="action_page.php">
+                                <div class="container">
+
+                                  <label for="username"><b>Username</b></label>
+                                  <input type="username" placeholder="Username" name="usn" id="usn" required>
+                              
+                                  <label for="psw"><b>Password</b></label>
+                                  <input type="password" placeholder="Enter Password" name="psw" id="psw" required>                         
+                                  
+                                  <button type="submit" class="loginbtn">Login</button>
+                                </div>
+                            
+                              </form>
+                            <a class="close" href="#">&times;</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="game-rules">
+                    <div class="box">
+                        <a class="button" href="#popup1">Instructions</a>
+                    </div>
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <h2>Game Instructions</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="content">
+                                1. The game begins with one player picking up all of the pieces in any one of the pockets on his/her side.
+                            </div>
+                            <div class="content">
+                                2. Moving counter-clockwise, the player deposits one of the stones in each pocket until the stones run out.
+                            </div>
+                            <div class="content">
+                                3. If you run into your own Mancala (store), deposit one piece in it. If you run into your opponent's Mancala, skip it and
+                                continue moving to the next pocket.
+                            </div>
+                            <div class="content">
+                                4. If the last piece you drop is in your own Mancala, you take another turn.
+                            </div>
+                            <div class="content">
+                                5. If the last piece you drop is in an empty pocket on your side, you capture that piece and any pieces in the pocket directly
+                                opposite.
+                            </div>
+                            <div class="content">
+                                6. Always place all captured pieces in your Mancala (store).
+                            </div><div class="content">
+                                7. The game ends when all six pockets on one side of the Mancala board are empty.
+                            </div><div class="content">
+                                8. The player who still has pieces on his/her side of the board when the game ends captures all of those pieces.
+                            </div><div class="content">
+                                9. Count all the pieces in each Mancala. The winner is the player with the most pieces.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="forfeit">
+                    <div class="box">
+                        <a class="button" href="#popup2">Forfeit</a>
+                    </div>
+                    <div id="popup2" class="overlay">
+                        <div class="popup">
+                            <h2>Do you want to forfeit the current game?</h2>
+                            <a class="close" href="#">&times;</a>
+                            <a class="button" href="#popup21">Yes</a>
+                            <a class="button" href="#popup22">No</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="leaderboard">
+                    <div class="box">
+                        <a class="button" href="#popup3">Leaderboard</a>
+                    </div>
+                    <div id="popup3" class="overlay">
+                        <div class="popup">
+                            <h2>Leaderboard</h2>
+                            <a class="close" href="#">&times;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game-rules"></div>
+    
+</body>
+</html>
